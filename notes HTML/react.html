@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./dist/css/main.css" />
+        <script src="./js/practice.js" defer></script>
+
+        <title>Learning</title>
+    </head>
+    <body>
+        <header>
+            <h1>Learning</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="js.html">JS</a>
+                <a href="node.html">Node & Packages</a>
+                <a href="react.html" class="active">React</a>
+                <a href="express.html">Express</a>
+                <a href="mongo.html">MongoDB</a>
+                <a href="css.html">CSS</a>
+                <a href="linux.html">Linux</a>
+                <a href="webserver.html">Web-Server</a>
+                <a href="docker.html">Docker</a>
+                <a href="ideas.html">Ideas</a>
+                <a href="jsAlgoDS.html">JS Algo & DS</a>
+                <a href="typescript.html">TypeScript</a>
+            </nav>
+        </header>
+        <main>
+            <h1> ReactJS & NextJS Notes </h1>
+
+            <br />
+
+            <div class="topic">
+                <ol>
+                    <li
+                        >React uses <strong>Declarative Approach</strong>. We
+                        define the desired target state(s) and let React figure
+                        out the actual JS DOM instructions.</li
+                    >
+                    <li>
+                        <strong>React-Events</strong>:
+                        <br />
+
+                        React events are named using camelCase, rather than
+                        lowercase. <br />
+                        With JSX you pass a function as the event handler,
+                        rather than a string.
+                        <img src="./img/react/reactEventHandler.png" alt="" />
+                    </li>
+                    <li
+                        >The first letter in the Component's name must be in
+                        caps when using in JSX.</li
+                    >
+                    <li
+                        >props.children: <br />
+                        It is used to display whatever you include between the
+                        opening and closing tags when invoking a component.
+                    </li>
+                    <li
+                        >"Whatever" you write/declare inside component while
+                        using them can be accessed by "props.Whatever". In
+                        short, " Attributes are Props".<br />Ex: &#60;Component
+                        cat="dog" /> <br />
+                        value of cat can be accessed inside component using
+                        "props.cat"
+                    </li>
+
+                    <li>
+                        JSX is fundamentally syntactic sugar. After compilation,
+                        JSX expressions become regular JavaScript function calls
+                        and evaluate to JavaScript objects. <br />
+                        We can embed any JavaScript expression in JSX by
+                        wrapping it in curly braces. <br />
+                        Note: Only expressions, not statements; means directly
+                        we can not put any statement (if-else/switch/for) inside
+                        JSX.
+                    </li>
+                    <li>
+                        Following <strong> cannot </strong>be used in a JSX
+                        Expression:<br />
+
+                        A for loop or while loop or any other loop<br />
+                        A variable declaration<br />
+                        A function declaration<br />
+                        An if condition<br />
+                        An object
+                    </li>
+                    <li
+                        ><strong>Rules of JSX:</strong><br />
+                        Return Single Element - Code must be wrapped in ONE top
+                        level element. <br />
+                        div/section/article or React Fragment - to use as a
+                        parent element (wrapper).<br />
+                        Use camelCase for HTML Attribute - ie. onClick<br />
+                        className Instead of Class.<br />
+                        Close Every Element, either self-closing or properly
+                        formatted.<br />
+                        Formatting - while returning JSX, we must have
+                        parenthesis around JSX or place parent element's
+                        starting tag on same line with 'return'.<br />
+                        Tags are elements - Use lowercase tags for DOM elements,
+                        and Capitalized tags for component elements.
+                    </li>
+
+                    <li
+                        >Each instance of the component will have it's own
+                        saperate "state". State is saperated on per component
+                        instanse basis.</li
+                    >
+                    <li
+                        >Any component can have multiple states and you can
+                        easily manage them saperately.</li
+                    >
+                    <li>
+                        If you use multiple states and merge them in single one
+                        then use the following tickmarked method. <br />
+                        If you update state that depends on the previous state,
+                        you should use the "function form" of the state updating
+                        function instead. <br />
+                        <img src="./img/react/multipleStatesInOne.png" alt="" />
+                    </li>
+                    <li
+                        >Custom built components do not support "className"
+                        property in React. You have to apply the classes
+                        manually to custom built component.</li
+                    >
+
+                    <li
+                        ><strong
+                            >Two Way Data Binding React or Controlled
+                            Input:</strong
+                        ></li
+                    >
+                    <li>Lifting the State up in React.</li>
+                </ol>
+            </div>
+        </main>
+    </body>
+</html>

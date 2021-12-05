@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./dist/css/main.css" />
+        <script src="./js/practice.js" defer></script>
+
+        <title>Learning</title>
+    </head>
+    <body>
+        <header>
+            <h1>Learning</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="js.html">JS</a>
+                <a href="node.html">Node & Packages</a>
+                <a href="react.html">React</a>
+                <a href="express.html">Express</a>
+                <a href="mongo.html" class="active">MongoDB</a>
+                <a href="css.html">CSS</a>
+                <a href="linux.html">Linux</a>
+                <a href="webserver.html">Web-Server</a>
+                <a href="docker.html">Docker</a>
+                <a href="ideas.html">Ideas</a>
+                <a href="jsAlgoDS.html">JS Algo & DS</a>
+                <a href="typescript.html">TypeScript</a>
+            </nav>
+        </header>
+        <main>
+            <h1> MongoDB Notes </h1>
+            <p>
+                mongoDB QUERY SELECTORS=>
+                <br />
+                Update Operators:
+                <br />
+                $currentDate : Sets the value of a field to current date
+                <br />
+                $inc : Incrementsthe value of the field by specified amount
+                <br />
+                $min : update field if the value is less than existing field
+                value
+                <br />
+                $max : update field if the value is more than existing field
+                value
+                <br />
+                $mul : multiplies the value of the field by the specified amount
+                <br />
+                $rename : renames a field
+                <br />
+                $set : sets the value of a field in a doc
+                <br />
+                $setOnInsert :Sets the value ofa field if an update results in
+                an insert of a doc.
+                <br />
+                $unset : removes the specified field from a doc Comparison:
+                <br />
+                $eq : equal to
+                <br />
+                $gt : greater than
+                <br />
+                $gte : greater than or equal to
+                <br />
+                $in : any value specified in array
+                <br />
+                $lt : less than
+                <br />
+                $lte : less than or equal to
+                <br />
+                $ne : not equal to
+                <br />
+                $nin : values not in array Logical:
+                <br />
+                $and : joins query clauses with logical AND
+                <br />
+                $not : inverts the effect of query expression
+                <br />
+                $nor : logical NOR returns all docs that fail to match both
+                clauses
+                <br />
+                $or : logical OR returns all docs those match either of the
+                queries
+                <br />
+                <br />
+                Misc:
+                <br />
+                $regex : selects doc where values match a specified regex
+                <br />
+                $text : performs text search
+                <br />
+                $where : matches doc that satisfy a JS expression
+                <br />
+                $all : matches arrays that contain all elements in the query
+                <br />
+                $ : projects the first element in array that matches the query
+                condition
+                <br />
+                $slice : limits the number of elements projected from array.
+                Supports skip & limit slices.
+                <br />
+                $comment: adds a comment to a query predicate
+                <br />
+                $rand : generates a random float between 0 and 1
+            </p>
+            <br />
+            <hr />
+            <br />
+            <p>
+                1)- cheat-sheet =>
+                <a
+                    style="font-size: 2rem"
+                    href="https://gist.github.com/bradtraversy/f407d642bdc3b31681bc7e56d95485b6"
+                    >Cheat Sheet Link</a
+                >
+            </p>
+            <br />
+            <p>
+                2)- show all DBs => show dbs 2)- show all data inside a
+                collection=> db.collectionname.find()
+            </p>
+            <br />
+            <p> 3)- current DB => db </p>
+            <br />
+            <p> 4)- create or use DB => use xyz </p>
+
+            <br />
+            <p> 5)- drop DB => use xyz db.dropDatabase() </p>
+
+            <br />
+            <p> 6)- Create Collection => db.createCollections("xyz") </p>
+
+            <br />
+            <p> 7)- Show collections => show collections </p>
+
+            <br />
+            <p> 8)- insert row => db.posts.insert({data:"data"}) </p>
+
+            <br />
+            <p>
+                9)- insert multiple rows=>
+                db.posts.insertMany({post1},{post2},....)
+            </p>
+
+            <br />
+            <p> 10)- get all rows => db.posts.find() </p>
+            <br />
+            <p> 11)- get all rows formatted=> db.posts.find().pretty() </p>
+            <br />
+            <p> 12)- find rows => db.posts.find({category:"abc")} </p>
+            <br />
+            <p> 13)- sort rows => db.posts.find().sort({title:1}).pretty() </p>
+            <br />
+            <p>
+                14)- count rows => db.posts.find().count()
+                db.posts.find({category:"abc"}).count()
+            </p>
+            <br />
+            <p>
+                15)- limit data result to x numbers=>
+                db.posts.find().limit(x).pretty()
+            </p>
+            <br />
+            <p>
+                16)- chaining =>
+                db.posts.find().limit(2).sort({title:1}).pretty()
+            </p>
+            <br />
+            <p>
+                17)- forEach db.posts.find().forEach(function(doc){ print("Blog
+                Post: " + doc.title)})
+            </p>
+            <br />
+            <p> 18)- find one row => db.posts.findOne({category:"news"}) </p>
+            <br />
+            <p>
+                19)- find specific fields db.posts.find({title: "Post
+                one"},{title:1},{author:1})
+            </p>
+            <br />
+            <p>
+                20)- update row => db.posts.update({title:"Post two"}, {
+                title:"post two", body: "New body for post2", date: Date()},
+                {upsert:true})
+            </p>
+            <br />
+            <p>
+                21)- update specific field=> db.posts.update({title:"post two"},
+                {$set:{ body:"body for post 2", category:"Technology"} })
+            </p>
+            <br />
+            <p>
+                22)- increment field db.posts.update({title:"post two", {$inc:{
+                likes:5}})
+            </p>
+            <br />
+            <p>
+                23)- rename field=> db.posts.update({title:"post"},
+                $rename:{likes:"views"}})
+            </p>
+            <br />
+            <p> 24)- delete row => db.posts.remove({title:"post"}) </p>
+            <br />
+            <p>
+                25)- Sub-Documents=> db.posts.update({ title: 'Post One' }, {
+                $set: {comments: [{body: 'Comment One', user: 'Mary Williams',
+                date: Date()}, {body: 'Comment Two', user: 'Harry White', date:
+                Date()} ] }})
+            </p>
+            <br />
+            <p>
+                26)- Find By Element in Array ($elemMatch)=> db.posts.find({
+                comments: { $elemMatch: {user: 'Mary Williams'}}})
+            </p>
+            <br />
+            <p> 27)- add index => db.posts.createIndex({title:"text"}) </p>
+            <br />
+            <p>
+                28)- text search => db.posts.find({ $text:{$search: "\"post
+                O\""}})
+            </p>
+            <br />
+            <p>
+                29)- Greater & Less Than=> db.posts.find({views:{$gt:2} })
+                db.posts.find({views:{$gte:2} }) db.posts.find({views:{$lt:2} })
+                db.posts.find({views:{$lte:2} })
+            </p>
+        </main>
+    </body>
+</html>

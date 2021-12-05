@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./dist/css/main.css" />
+        <script src="./js/practice.js" defer></script>
+
+        <title>Learning</title>
+    </head>
+    <body>
+        <header>
+            <h1>Learning</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="js.html">JS</a>
+                <a href="node.html" class="active">Node & Packages</a>
+                <a href="react.html">React</a>
+                <a href="express.html">Express</a>
+                <a href="mongo.html">MongoDB</a>
+                <a href="css.html">CSS</a>
+                <a href="linux.html">Linux</a>
+                <a href="webserver.html">Web-Server</a>
+                <a href="docker.html">Docker</a>
+                <a href="ideas.html">Ideas</a>
+                <a href="jsAlgoDS.html">JS Algo & DS</a>
+                <a href="typescript.html">TypeScript</a>
+            </nav>
+        </header>
+        <main>
+            <h1> Node Packages </h1>
+            <br />
+            <p> *)- body-parser To parse the body of response. </p>
+            <br />
+            <p>
+                1)- validator (small v in validator)=>: to validate emails, URLs
+                etc 2)- chalk => to color the output/result in server to
+                highlight certain stuff
+            </p>
+            <br />
+            <p>
+                3)- nodemon => to run program in VS code terminal as soon as we
+                save
+            </p>
+            <br />
+            <p>
+                4)- Yargs: Syntax=> in cosole: node filename.js keyword > const
+                yargs = require(`yargs`); yargs.command({ command: `keyword`,
+                describe: `Remove the Item!`, handler: function () {
+                console.log(`This function will be triggered with 'keyword'`);
+                }, }); console.log(yargs.argv);
+            </p>
+            <br />
+            <p>
+                5)- events=> const EventEmitter = require(`events`); const event
+                = new EventEmitter(); EventEmitter is a class and event is
+                object created with that class
+            </p>
+            <br />
+            <p> 6)- requests => </p>
+            <br />
+            <p> 7)- express-handlebars > </p>
+            <br />
+            <p> 8)- dotenv => </p>
+            <br />
+            <p> 9)- jsonwebtoken=> for token etc related to logins </p>
+            <br />
+            <p> 10)- multer => for file uploads </p>
+            <br />
+            <p> 11)- mysql2 => For mySQL database </p>
+            <br />
+            <p> 12)- sequelize=> To use mySQL like mongoose </p>
+            <br />
+            <p>
+                13)- mongoose => mongoose
+                .connect(process.env.CONNECTION_STRING, { useNewUrlParser: true,
+                useUnifiedTopology: true, useFindAndModify: false,
+                useCreateIndex: true, }) .then((data) => console.log('DB
+                Connected')) .catch(() => console.log('error'));
+            </p>
+            <br />
+            <hr />
+            <br />
+            <p> Node Notes: process.argv </p>
+            <br />
+            <p> 1)- import package> const package = require(`packageName`); </p>
+            <br />
+            <p>
+                2)- Global data => module.exports = name/function name; to pass
+                multiple values from example.js as global: module.exports=
+                {add,sub,mul,...}; then we can access these in another file like
+                we access properties of objects ex: const {add, sub, mul,....} =
+                require(`example.js`);
+            </p>
+            <br />
+            <p> 2)- global & process are equal to window & document in node </p>
+            <br />
+            <p>
+                3)- Properties and Methods of Node =>VS Code Terminal > Node
+                (enter) > Tab button 2 times
+            </p>
+            <br />
+            <p>
+                4)- NodeJS has additional data type named `Buffer`. Buffer is
+                mainly used to store binary data, while reading from a file or
+                receiving packets over the network.
+            </p>
+            <br />
+            <p>
+                5)- no Asynchronous function will run before the `main` function
+                fishishes execution. Thats why we wont see any call back
+                function executed before CLog of main function(main program
+                body).
+            </p>
+            <br />
+            <p>
+                6)- Routing refers to the mechanism for serving the client the
+                content it has asked for.
+            </p>
+            <br />
+            <p>
+                7)- In Express, the order in which routes and middleware are
+                added is significant. If we put the 404 handler above the
+                routes, the home page and About page would stop working.
+            </p>
+            <br />
+            <p>
+                8)- res.send() => Performs many useful tasks for simple
+                non-streaming responses. res.send() implements res.write,
+                res.setHeaders and res.end! res.send can only be called once,
+                since it is equivalent to res.write + res.end()
+            </p>
+        </main>
+    </body>
+</html>

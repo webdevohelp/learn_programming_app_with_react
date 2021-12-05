@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@200;300;400;500;600;700;800;900&display=swap");
+*, html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Exo 2';
+  text-decoration: none;
+  list-style: decimal;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 10px;
+  line-height: 3.75rem;
+}
+
+.active {
+  border: 1px solid #fff17b;
+  padding: 0 1.8rem;
+  color: #fff17b;
+  text-shadow: 0.2rem 0.2rem 0.5rem #fff17b;
+}
+
+.topic {
+  margin: 4rem 0;
+  padding: 1.8rem 1rem;
+  border-bottom: 1px solid rgba(100, 100, 100, 0.5);
+  font-size: 1.8rem;
+}
+
+.topic > p, .topic > ol > li, .topic > ol > li > pre, .topic > strong, .topic > sub, .topic > sup {
+  font-size: 1.8rem;
+  margin: 1rem;
+  padding: 0.75rem;
+}
+
+.topic > p > a, .topic > ol > li > a, .topic > ol > li > pre > a, .topic > strong > a, .topic > sub > a, .topic > sup > a {
+  font-size: 1.8rem;
+  border-bottom: 1px solid gray;
+}
+
+.topic > p > img, .topic > p > ol > li > img, .topic > ol > li > img, .topic > ol > li > ol > li > img, .topic > ol > li > pre > img, .topic > ol > li > pre > ol > li > img, .topic > strong > img, .topic > strong > ol > li > img, .topic > sub > img, .topic > sub > ol > li > img, .topic > sup > img, .topic > sup > ol > li > img {
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  -webkit-box-shadow: 2px 2px 13px #64646449;
+          box-shadow: 2px 2px 13px #64646449;
+}
+
+.topic > p > strong, .topic > p > sub, .topic > p > sup, .topic > ol > li > strong, .topic > ol > li > sub, .topic > ol > li > sup, .topic > ol > li > pre > strong, .topic > ol > li > pre > sub, .topic > ol > li > pre > sup, .topic > strong > strong, .topic > strong > sub, .topic > strong > sup, .topic > sub > strong, .topic > sub > sub, .topic > sub > sup, .topic > sup > strong, .topic > sup > sub, .topic > sup > sup {
+  font-size: 1.8rem;
+}
+
+.topic > p:hover, .topic > li:hover, .topic > ol > li:hover {
+  -webkit-box-shadow: 2px 2px 13px #64646449;
+          box-shadow: 2px 2px 13px #64646449;
+}
+
+.highlight {
+  color: #ac2c2c;
+  font-size: 1em;
+}
+
+main > h1 {
+  font-size: 4.5rem;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(100, 100, 100, 0.75);
+}
+
+h2 {
+  font-size: 3rem;
+  padding-bottom: 1.8rem;
+}
+
+h3 {
+  font-size: 2.25rem;
+  padding-bottom: 1.8rem;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  padding: 1.8rem;
+  -ms-grid-rows: 7rem;
+      grid-template-rows: 7rem;
+  -ms-grid-columns: 1fr 6fr;
+      grid-template-columns: 1fr 6fr;
+  background-color: #131315;
+  color: #fefefe;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+header > h1 {
+  font-size: 7rem;
+  color: black;
+  color: #fff17b;
+}
+
+header > nav > a {
+  color: #fefefe;
+  font-size: 1.75rem;
+  padding: 0 1.75rem;
+  margin: 0 0.5rem;
+}
+
+header > nav > a:hover {
+  border-bottom: 2px solid gray;
+  border-top: 2px solid gray;
+}
+
+main {
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  padding: 1.8rem;
+  width: 90vw;
+  -webkit-box-shadow: 2px 2px 13px rgba(100, 100, 100, 0.75);
+          box-shadow: 2px 2px 13px rgba(100, 100, 100, 0.75);
+}
+
+main > p {
+  font-size: 2.25rem;
+}
